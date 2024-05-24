@@ -1,0 +1,112 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(29, 29, 29);
+}
+
+nav {
+    display: flex;
+    background-color: rgb(52, 61, 65);
+    padding: 30px;
+    justify-content: space-between;
+}
+h2{
+    color: #ffffff;
+}
+nav ul {
+    display: flex; 
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 20px;
+}
+
+nav ul li a {
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: transform 0.5s , 1s;
+}
+nav ul li a:hover{
+    background-color: rgb(112, 129, 137);
+    transform: scale(1.1);
+}
+
+#menu  {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+   h2{
+    position: relative;
+    top: 1.3rem;
+   }
+nav ul  {
+    flex-direction: column;
+    margin-top: 70px;
+    width: 100%;
+    transition: transform 0.5s ease; 
+}
+
+#menu{
+    display: block;
+}
+
+nav .hidden{
+    display: none;
+}
+
+} 
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#ffffff;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+
+.ham7 .top {
+  stroke-dasharray: 40 82;
+}
+.ham7 .middle {
+  stroke-dasharray: 40 111;
+}
+.ham7 .bottom {
+  stroke-dasharray: 40 161;
+}
+.ham7.active .top {
+  stroke-dasharray: 17 82;
+  stroke-dashoffset: -62px;
+}
+.ham7.active .middle {
+  stroke-dashoffset: 23px;
+}
+.ham7.active .bottom {
+  stroke-dashoffset: -83px;
+}
